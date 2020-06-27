@@ -11,15 +11,15 @@ class PlayerName extends Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     playerName: props.playerName,
-        // }
-        // this.handlePlayer = this.handlePlayer.bind(this);
+        this.state = {
+            playername: props.playername,
+        }
+        this.handlePlayer = this.handlePlayer.bind(this);
     }
 
-    // handlePlayer(e) {
-    //     this.setState({ player1Name: e.currentTarget.value });
-    // }
+    handlePlayer(e) {
+        this.setState({ playername: e.currentTarget.value });
+    }
 
     // handleWinningScore(e) {
     //     this.setState({ winningScore: e.currentTarget.value });
@@ -31,7 +31,7 @@ class PlayerName extends Component {
     //     this.props.handleSave(this.state);
     // }
     render() {
-        // let { } = this.state;
+        let { playername } = this.state;
         return (
             <>
                 <Form>
@@ -40,8 +40,8 @@ class PlayerName extends Component {
                         <Form.Control
                             type="name"
                             placeholder="Enter name"
-                        // value={playerName}
-                        // onChange={this.handlePlayer}
+                            value={playername}
+                            onChange={this.handlePlayer}
                         />
                     </Form.Group>
                 </Form>
