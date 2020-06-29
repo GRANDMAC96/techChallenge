@@ -3,8 +3,9 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Header from "./components/Header/Header"
-import PlayerName from './components/Header/PlayerName/PlayerName';
+import Header from "./components/Header/Header";
+import PlayerName from './components/PlayerName';
+import PlayerList from './components/PlayerList';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <React.Fragment>
         <Header />
         <PlayerName />
+        <PlayerList />
       </React.Fragment>
     </Router>
   );

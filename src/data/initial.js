@@ -1,5 +1,5 @@
 const initialState = {
-    playername: "Player Name",
+    playername: "",
     playerlist: [],
 };
 

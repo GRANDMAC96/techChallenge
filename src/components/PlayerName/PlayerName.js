@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+
 
 // import { saveSettings } from "../../data/actions";
 
@@ -15,6 +14,7 @@ class PlayerName extends Component {
             playername: props.playername,
         }
         this.handlePlayer = this.handlePlayer.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handlePlayer(e) {
@@ -24,32 +24,29 @@ class PlayerName extends Component {
     // handleWinningScore(e) {
     //     this.setState({ winningScore: e.currentTarget.value });
     // }
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     // call the passed in function
-    //     // pass it the current input value 
-    //     this.props.handleSave(this.state);
-    // }
+    handleSubmit(e) {
+        e.preventDefault();
+        // call the passed in function
+        // pass it the current input value 
+        this.props.handleAddition(this.state.playername);
+        this.setState({ playername: "" });
+    }
     render() {
         let { playername } = this.state;
         return (
             <>
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Player Name</Form.Label>
-                        <Form.Control
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <label>Player Name</label>
+                        <input
                             type="name"
                             placeholder="Enter name"
                             value={playername}
                             onChange={this.handlePlayer}
                         />
-                    </Form.Group>
-                </Form>
-                <Button
-                // variant="primary"
-                // onClick={this.handleSubmit}
-                >
-                    Start Game</Button>
+                    </div>
+                    <button>Start Game</button>
+                </form>
             </>
         );
     }

@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import "../src/styles/main.css";
 import store from "./data/store";
 //  import initial from "./data/initial";
-import reducers from "./data/reducers";
+// import reducers from "./data/reducers";
 
 ReactDOM.render(
   <Provider store={store}>
