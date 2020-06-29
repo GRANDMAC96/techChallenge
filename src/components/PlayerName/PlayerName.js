@@ -35,7 +35,7 @@ class PlayerName extends Component {
         let { playername } = this.state;
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
+                <form className="form">
                     <div>
                         <label>Player Name</label>
                         <input
@@ -45,8 +45,11 @@ class PlayerName extends Component {
                             onChange={this.handlePlayer}
                         />
                     </div>
-                    <button>Start Game</button>
                 </form>
+                <button
+                    onClick={this.handleSubmit}
+                    className="button">Add Player
+                </button>
             </>
         );
     }
