@@ -4,3 +4,8 @@ export const list = (playername) => {
         playername: playername
     };
 };
+export const team = () => {
+    return {
+        type: "CREATETEAM",
+    };
+};
