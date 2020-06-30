@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/techChallenge/static/css/main.7d4b3a08.chunk.css",
-    "main.js": "/techChallenge/static/js/main.d6d62add.chunk.js",
-    "main.js.map": "/techChallenge/static/js/main.d6d62add.chunk.js.map",
+    "main.js": "/techChallenge/static/js/main.cc41adda.chunk.js",
+    "main.js.map": "/techChallenge/static/js/main.cc41adda.chunk.js.map",
     "runtime-main.js": "/techChallenge/static/js/runtime-main.01fc36a5.js",
     "runtime-main.js.map": "/techChallenge/static/js/runtime-main.01fc36a5.js.map",
-    "static/js/2.31dc79ff.chunk.js": "/techChallenge/static/js/2.31dc79ff.chunk.js",
-    "static/js/2.31dc79ff.chunk.js.map": "/techChallenge/static/js/2.31dc79ff.chunk.js.map",
+    "static/js/2.29321e2c.chunk.js": "/techChallenge/static/js/2.29321e2c.chunk.js",
+    "static/js/2.29321e2c.chunk.js.map": "/techChallenge/static/js/2.29321e2c.chunk.js.map",
     "index.html": "/techChallenge/index.html",
-    "precache-manifest.d17420e7a29ed0ed76ae595b7e062e53.js": "/techChallenge/precache-manifest.d17420e7a29ed0ed76ae595b7e062e53.js",
+    "precache-manifest.c2d91975f7205c918eec8c8a447f33a1.js": "/techChallenge/precache-manifest.c2d91975f7205c918eec8c8a447f33a1.js",
     "service-worker.js": "/techChallenge/service-worker.js",
     "static/css/main.7d4b3a08.chunk.css.map": "/techChallenge/static/css/main.7d4b3a08.chunk.css.map",
-    "static/js/2.31dc79ff.chunk.js.LICENSE.txt": "/techChallenge/static/js/2.31dc79ff.chunk.js.LICENSE.txt",
+    "static/js/2.29321e2c.chunk.js.LICENSE.txt": "/techChallenge/static/js/2.29321e2c.chunk.js.LICENSE.txt",
     "static/media/main.css": "/techChallenge/static/media/Notable-Regular.dc386f0b.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.01fc36a5.js",
-    "static/js/2.31dc79ff.chunk.js",
+    "static/js/2.29321e2c.chunk.js",
     "static/css/main.7d4b3a08.chunk.css",
-    "static/js/main.d6d62add.chunk.js"
+    "static/js/main.cc41adda.chunk.js"
   ]
 }
