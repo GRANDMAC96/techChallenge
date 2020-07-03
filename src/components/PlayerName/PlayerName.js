@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Table from 'react-bootstrap/Table';
 
 
 // import { saveSettings } from "../../data/actions";
@@ -9,30 +11,29 @@ import React, { Component } from 'react';
 class PlayerName extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            playername: props.playername,
-        }
         this.handlePlayer = this.handlePlayer.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);
     }
 
     handlePlayer(e) {
-        this.setState({ playername: e.currentTarget.value });
+        // this.setState({ playername: e.currentTarget.value });
+        this.props.setPlayerName(e.currentTarget.value);
     }
 
-    // handleWinningScore(e) {
-    //     this.setState({ winningScore: e.currentTarget.value });
-    // }
     handleSubmit(e) {
         e.preventDefault();
         // call the passed in function
         // pass it the current input value 
-        this.props.handleAddition(this.state.playername);
+        this.props.handleAddition(this.props.playername);
+        // this.setState({ playersarray: [...this.state.playersarray, { playername: this.state.playername }] })
         this.setState({ playername: "" });
     }
+    handleCreate(e) {
+        e.preventDefault();
+        this.props.handleTeam(this.props.playerlist);
+    }
     render() {
-        let { playername } = this.state;
         return (
             <>
                 <form className="form">
@@ -41,7 +42,7 @@ class PlayerName extends Component {
                         <input
                             type="name"
                             placeholder="Enter name"
-                            value={playername}
+                            value={this.props.playername}
                             onChange={this.handlePlayer}
                         />
                     </div>
@@ -50,6 +51,26 @@ class PlayerName extends Component {
                     onClick={this.handleSubmit}
                     className="button">Add Player
                 </button>
+                <button
+                    onClick={this.handleCreate}>
+                    {/* <Link to="/">Create Team</Link> */}
+                    Create
+                </button>
+
+                {/* <Table responsive>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>{
+                        playersarray.map((player, index) =>
+                            <tr key={index}>
+                                <td>{player.playername}</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </Table> */}
             </>
         );
     }
