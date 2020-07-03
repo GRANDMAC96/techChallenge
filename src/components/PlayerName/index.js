@@ -1,22 +1,28 @@
 import { connect } from "react-redux";
 import PlayerName from "./PlayerName";
-import { list } from "../../data/actions";
+import { player, list, team } from "../../data/actions";
 
 
 const mapStateToProps = (state) => {
     return {
         playername: state.playername,
+        playerlist: state.playerlist,
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        setPlayerName: (playername) => {
+            dispatch(player(playername));
+        },
         handleAddition: (data) => {
             dispatch(list(data));
-        }
+        },
+        handleTeam: (players) => {
+            dispatch(team(players));
+        },
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerName);
 
-// export default connect(mapStateToProps)(PlayerName);
