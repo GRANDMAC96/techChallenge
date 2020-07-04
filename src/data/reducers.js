@@ -1,3 +1,5 @@
+import initialState from "./initial";
+
 const player = (state, action) => {
     return {
         ...state,
@@ -13,8 +15,9 @@ const list = (state, action) => {
             {
                 playername: action.playername
             }
-        ]
-    }
+        ],
+        playername: "",
+    };
 }
 
 //randomly shuffles an array efficiently
