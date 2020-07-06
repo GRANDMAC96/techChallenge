@@ -16,3 +16,8 @@ export const team = (players) => {
         players: players,
     };
 };
+export const reset = () => {
+    return {
+        type: "RESETTEAMS",
+    };
+};
