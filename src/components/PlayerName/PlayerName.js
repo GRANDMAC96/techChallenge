@@ -17,17 +17,12 @@ class PlayerName extends Component {
     }
 
     handlePlayer(e) {
-        // this.setState({ playername: e.currentTarget.value });
         this.props.setPlayerName(e.currentTarget.value);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        // call the passed in function
-        // pass it the current input value 
         this.props.handleAddition(this.props.playername);
-        // this.setState({ playersarray: [...this.state.playersarray, { playername: this.state.playername }] })
-        this.setState({ playername: "" });
     }
     handleCreate(e) {
         e.preventDefault();
@@ -53,24 +48,8 @@ class PlayerName extends Component {
                 </button>
                 <button
                     onClick={this.handleCreate}>
-                    {/* <Link to="/">Create Team</Link> */}
-                    Create
+                    <Link to="/teampage">Create Team</Link>
                 </button>
-
-                {/* <Table responsive>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>{
-                        playersarray.map((player, index) =>
-                            <tr key={index}>
-                                <td>{player.playername}</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </Table> */}
             </>
         );
     }

@@ -6,15 +6,20 @@ import {
 import Header from "./components/Header/Header";
 import PlayerName from './components/PlayerName';
 import PlayerList from './components/PlayerList';
+import Team from './components/Team';
 
 const App = () => {
   return (
     <Router>
       <React.Fragment>
         <Route exact path="/">
-          <Header />
+          <Header text={"Select Your Team"} />
           <PlayerName />
           <PlayerList />
+        </Route>
+        <Route exact path="/teampage">
+          <Header text={"Teams"} />
+          <Team />
         </Route>
       </React.Fragment>
     </Router>

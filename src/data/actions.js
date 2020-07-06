@@ -13,6 +13,6 @@ export const list = (playername) => {
 export const team = (players) => {
     return {
         type: "CREATETEAM",
-        players: players
+        players: players,
     };
 };
