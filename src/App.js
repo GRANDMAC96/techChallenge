@@ -13,11 +13,12 @@ const App = () => {
     <Router>
       <React.Fragment>
         <Route exact path="/">
-          <Header />
+          <Header text={"Select Your Team"} />
           <PlayerName />
           <PlayerList />
         </Route>
         <Route exact path="/teampage">
+          <Header text={"Teams"} />
           <Team />
         </Route>
       </React.Fragment>
