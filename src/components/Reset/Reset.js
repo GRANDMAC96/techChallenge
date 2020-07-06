@@ -4,7 +4,7 @@ const Reset = ({ resetTeams }) => {
     return (
         <>
             <button
-                className="btn btn-danger"
+                className="btn btn-danger button"
                 onClick={resetTeams}
             >Reset</button>
         </>
