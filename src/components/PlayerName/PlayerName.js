@@ -48,8 +48,7 @@ class PlayerName extends Component {
                 </button>
                 <button
                     onClick={this.handleCreate}>
-                    {/* <Link to="/">Create Team</Link> */}
-                    Create
+                    <Link to="/teampage">Create Team</Link>
                 </button>
             </>
         );
