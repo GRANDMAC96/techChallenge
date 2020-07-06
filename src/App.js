@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import PlayerName from './components/PlayerName';
 import PlayerList from './components/PlayerList';
 import Team from './components/Team';
+import Reset from './components/Reset';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Header text={"Select Your Team"} />
           <PlayerName />
           <PlayerList />
+          <Reset />
         </Route>
         <Route exact path="/teampage">
           <Header text={"Teams"} />

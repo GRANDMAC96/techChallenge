@@ -23,21 +23,6 @@ const list = (state, action) => {
 //randomly shuffles an array efficiently
 
 
-// const team = (state, action) => {
-//     let players = [...action.playersarray];
-//     for (let i = players.length - 1; i > 0; i -= 1) {
-//         let rand = Math.floor((i + 1) * Math.random()); //get random between zero and i (inclusive)
-//         let temp = players[i];   //swap i and the random index
-//         players[i] = players[rand];
-//         players[rand] = temp;
-//     }
-//     return {
-//         ...state,
-//         playerlist: [...players]
-//     }
-
-// }
-
 // shuffle function, randomly shuffles an array efficiently, for use with the Create Team button
 const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i -= 1) {
@@ -63,11 +48,22 @@ const teams = (state, action) => {
     }
 }
 
+const reset = state => {
+    return {
+        ...state,
+        playername: "",
+        playerlist: [],
+        teamA: [],
+        teamB: [],
+    };
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "CHANGENAME": return player(state, action);
         case "ADDPLAYER": return list(state, action);
         case "CREATETEAM": return teams(state, action);
+        case "RESETTEAMS": return reset(state);
         default: return state;
     }
 }
