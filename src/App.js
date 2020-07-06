@@ -6,7 +6,7 @@ import {
 import Header from "./components/Header/Header";
 import PlayerName from './components/PlayerName';
 import PlayerList from './components/PlayerList';
-import Team from './components/Team/Team';
+import Team from './components/Team';
 
 const App = () => {
   return (
