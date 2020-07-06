@@ -44,11 +44,17 @@ class PlayerName extends Component {
                 </form>
                 <button
                     onClick={this.handleSubmit}
-                    className="button">Add Player
+                    className="btn btn-danger button">Add Player
                 </button>
                 <button
-                    onClick={this.handleCreate}>
-                    <Link to="/teampage">Create Team</Link>
+                    onClick={this.handleCreate}
+                    className="btn btn-danger button"
+                >
+                    <Link
+                        to="/teampage"
+                        className="button"
+                    >
+                        Create Team</Link>
                 </button>
             </>
         );
